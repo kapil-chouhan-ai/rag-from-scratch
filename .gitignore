@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+.vscode/
+
+data/
+
+models/dolphin/
+
+store/
+
+.ipynb_checkpoints/
+
+.env
