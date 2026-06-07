@@ -15,7 +15,7 @@ def generate_model():
 
 def reranker_model():
     return CrossEncoder(
-        "BAAI/bge-reranker-base"
+        "cross-encoder/ms-marco-TinyBERT-L4"
     )
 
 def pdfloader():

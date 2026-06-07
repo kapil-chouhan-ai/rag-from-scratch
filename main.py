@@ -1,12 +1,17 @@
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="torch")
+
 import torch
 # Fix the missing FP8 attribute bug for older PyTorch versions
 if not hasattr(torch, "float8_e8m0fnu"):
     setattr(torch, "float8_e8m0fnu", torch.float32)
+
 # Get currently allocated memory by active tensors (in MB)
 print(f"Allocated: {torch.cuda.memory_allocated() / 1024**2:.2f} MB")
 
 # Get total memory being held by the PyTorch cache (in MB)
 print(f"Cached:    {torch.cuda.memory_reserved() / 1024**2:.2f} MB")
+
 from models.model import generate_model, embed_model, reranker_model, pdfloader
 from rag.ingestion import IngestionPipeline
 from rag.pipeline import RAGPipeline
@@ -40,9 +45,16 @@ ingestion.save(
 )
 
 rag = RAGPipeline(retriever = retriever,
-                  reranker = Reranker(),
+                  reranker = Reranker(reranker_model()),
                   context_builder = ContextBuilder(),
                   generator = Generate(generate_model()))
+
+
+# Get currently allocated memory by active tensors (in MB)
+print(f"Allocated: {torch.cuda.memory_allocated() / 1024**2:.2f} MB")
+
+# Get total memory being held by the PyTorch cache (in MB)
+print(f"Cached:    {torch.cuda.memory_reserved() / 1024**2:.2f} MB")
 
 
 while True:
@@ -52,4 +64,3 @@ while True:
 
     result = rag.run(query)
     print(result["answer"])
-    
