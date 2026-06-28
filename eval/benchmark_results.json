@@ -1,16 +1,16 @@
 [
   {
     "config": "dense_flat_no_rerank",
-    "embedding_time_s": 7.047,
-    "index_build_time_s": 0.002,
+    "embedding_time_s": 6.812,
+    "index_build_time_s": 0.005,
     "index_memory_delta_mb": {
-      "rss_mb": 1.54,
+      "rss_mb": 1.57,
       "cuda_allocated_mb": 0.0,
       "cuda_reserved_mb": 0.0
     },
     "retrieval_latency_ms": {
-      "mean_ms": 93.13,
-      "p95_ms": 114.44
+      "mean_ms": 74.61,
+      "p95_ms": 98.33
     },
     "Hit@K": 0.88,
     "Recall@K": 0.88,
@@ -19,16 +19,16 @@
   },
   {
     "config": "dense_flat_rerank",
-    "embedding_time_s": 7.047,
-    "index_build_time_s": 0.002,
+    "embedding_time_s": 6.812,
+    "index_build_time_s": 0.005,
     "index_memory_delta_mb": {
-      "rss_mb": 1.54,
+      "rss_mb": 1.57,
       "cuda_allocated_mb": 0.0,
       "cuda_reserved_mb": 0.0
     },
     "retrieval_latency_ms": {
-      "mean_ms": 122.75,
-      "p95_ms": 155.72
+      "mean_ms": 99.72,
+      "p95_ms": 119.73
     },
     "Hit@K": 0.88,
     "Recall@K": 0.88,
@@ -37,16 +37,16 @@
   },
   {
     "config": "dense_hnsw_rerank",
-    "embedding_time_s": 7.047,
-    "index_build_time_s": 0.021,
+    "embedding_time_s": 6.812,
+    "index_build_time_s": 0.034,
     "index_memory_delta_mb": {
-      "rss_mb": 4.48,
+      "rss_mb": 6.0,
       "cuda_allocated_mb": 0.0,
       "cuda_reserved_mb": 0.0
     },
     "retrieval_latency_ms": {
-      "mean_ms": 117.5,
-      "p95_ms": 142.24
+      "mean_ms": 98.47,
+      "p95_ms": 117.39
     },
     "Hit@K": 0.88,
     "Recall@K": 0.88,
@@ -55,16 +55,16 @@
   },
   {
     "config": "hybrid_flat_rerank",
-    "embedding_time_s": 7.047,
-    "index_build_time_s": 0.002,
+    "embedding_time_s": 6.812,
+    "index_build_time_s": 0.005,
     "index_memory_delta_mb": {
-      "rss_mb": 1.54,
+      "rss_mb": 1.57,
       "cuda_allocated_mb": 0.0,
       "cuda_reserved_mb": 0.0
     },
     "retrieval_latency_ms": {
-      "mean_ms": 116.1,
-      "p95_ms": 149.23
+      "mean_ms": 106.21,
+      "p95_ms": 129.07
     },
     "Hit@K": 0.92,
     "Recall@K": 0.92,

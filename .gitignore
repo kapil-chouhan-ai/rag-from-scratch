@@ -11,5 +11,3 @@ store/
 .ipynb_checkpoints/
 
 .env
-
-experiments/
