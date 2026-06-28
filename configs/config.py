@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass
 class Config:
 
@@ -9,7 +10,7 @@ class Config:
     parent_chunk_size: int = 1000
     parent_chunk_overlap: int = 200
 
-    index_type: str = "flat"
+    index_type: str = "flat"          # flat | ivf | hnsw
 
     n_list: int = 100
     nprobe: int = 10
@@ -20,3 +21,13 @@ class Config:
 
     retrieve_k: int = 30
     rerank_k: int = 5
+
+    retrieval_mode: str = "hybrid"    # dense | hybrid
+    rrf_k: int = 60
+    candidate_pool: int = 30
+
+    use_query_expansion: bool = False
+    num_query_variants: int = 2
+
+    
+    embed_instruction: str = "Represent this sentence for retrieving relevant passages: "

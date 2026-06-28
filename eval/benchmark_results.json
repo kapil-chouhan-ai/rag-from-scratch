@@ -1,0 +1,74 @@
+[
+  {
+    "config": "dense_flat_no_rerank",
+    "embedding_time_s": 7.047,
+    "index_build_time_s": 0.002,
+    "index_memory_delta_mb": {
+      "rss_mb": 1.54,
+      "cuda_allocated_mb": 0.0,
+      "cuda_reserved_mb": 0.0
+    },
+    "retrieval_latency_ms": {
+      "mean_ms": 93.13,
+      "p95_ms": 114.44
+    },
+    "Hit@K": 0.88,
+    "Recall@K": 0.88,
+    "MRR": 0.7333,
+    "NDCG@K": 0.7702
+  },
+  {
+    "config": "dense_flat_rerank",
+    "embedding_time_s": 7.047,
+    "index_build_time_s": 0.002,
+    "index_memory_delta_mb": {
+      "rss_mb": 1.54,
+      "cuda_allocated_mb": 0.0,
+      "cuda_reserved_mb": 0.0
+    },
+    "retrieval_latency_ms": {
+      "mean_ms": 122.75,
+      "p95_ms": 155.72
+    },
+    "Hit@K": 0.88,
+    "Recall@K": 0.88,
+    "MRR": 0.78,
+    "NDCG@K": 0.8049
+  },
+  {
+    "config": "dense_hnsw_rerank",
+    "embedding_time_s": 7.047,
+    "index_build_time_s": 0.021,
+    "index_memory_delta_mb": {
+      "rss_mb": 4.48,
+      "cuda_allocated_mb": 0.0,
+      "cuda_reserved_mb": 0.0
+    },
+    "retrieval_latency_ms": {
+      "mean_ms": 117.5,
+      "p95_ms": 142.24
+    },
+    "Hit@K": 0.88,
+    "Recall@K": 0.88,
+    "MRR": 0.78,
+    "NDCG@K": 0.8049
+  },
+  {
+    "config": "hybrid_flat_rerank",
+    "embedding_time_s": 7.047,
+    "index_build_time_s": 0.002,
+    "index_memory_delta_mb": {
+      "rss_mb": 1.54,
+      "cuda_allocated_mb": 0.0,
+      "cuda_reserved_mb": 0.0
+    },
+    "retrieval_latency_ms": {
+      "mean_ms": 116.1,
+      "p95_ms": 149.23
+    },
+    "Hit@K": 0.92,
+    "Recall@K": 0.92,
+    "MRR": 0.7913,
+    "NDCG@K": 0.8232
+  }
+]

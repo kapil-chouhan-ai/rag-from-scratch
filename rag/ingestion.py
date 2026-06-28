@@ -7,6 +7,7 @@ from rag.chunker import Chunker
 from rag.embedder import Embedder
 from rag.vectorstore import VectorStore
 from rag.retriever import Retriever
+from rag.sparse_retriever import BM25Retriever
 
 
 class IngestionPipeline:
@@ -57,18 +58,17 @@ class IngestionPipeline:
         embeddings = self.embedder.embed_docs(texts)
         self.vector_store.add(embeddings)
 
-        retriever = Retriever(
-            self.embedder,
-            self.vector_store,
-            child_to_parent,
-            parents
-        )
-
+        retriever = Retriever(self.embedder, self.vector_store, child_to_parent, parents)
+        sparse_retriever = BM25Retriever(children, child_to_parent, parents)
+ 
         return {
             "retriever": retriever,
+            "sparse_retriever": sparse_retriever,
             "vector_store": self.vector_store,
             "parent_chunks": parents,
-            "child_to_parent": child_to_parent
+            "children": children,
+            "child_to_parent": child_to_parent,
+            "indexing_time_s": time.time() - start,
         }
 
 

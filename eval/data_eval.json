@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What is the title of this paper and which research lab are the authors from?",
+    "expected": [{"source": "data/attention.pdf", "page": 0}]
+  },
+  {
+    "question": "What background on RNNs, LSTMs, and gated recurrent neural networks motivates this work?",
+    "expected": [{"source": "data/attention.pdf", "page": 1}]
+  },
+  {
+    "question": "Where is the overall Transformer model architecture diagram with the encoder and decoder stacks described?",
+    "expected": [{"source": "data/attention.pdf", "page": 2}]
+  },
+  {
+    "question": "How is Scaled Dot-Product Attention defined and how does it relate to Multi-Head Attention?",
+    "expected": [{"source": "data/attention.pdf", "page": 3}]
+  },
+  {
+    "question": "What does multi-head attention allow the model to do that a single attention head cannot?",
+    "expected": [{"source": "data/attention.pdf", "page": 4}]
+  },
+  {
+    "question": "What table compares the maximum path length and per-layer complexity of self-attention, recurrent, and convolutional layers?",
+    "expected": [{"source": "data/attention.pdf", "page": 5}]
+  },
+  {
+    "question": "What BLEU scores did the Transformer achieve on English-to-German and English-to-French translation compared to prior state-of-the-art models?",
+    "expected": [{"source": "data/attention.pdf", "page": 7}]
+  },
+  {
+    "question": "What ablation results are reported for varying the number of attention heads and key/value dimensions?",
+    "expected": [{"source": "data/attention.pdf", "page": 8}]
+  },
+  {
+    "question": "What were the Transformer's results on English constituency parsing on the WSJ dataset?",
+    "expected": [{"source": "data/attention.pdf", "page": 9}]
+  },
+  {
+    "question": "What does BERT stand for and what is its core idea compared to left-to-right language model pre-training?",
+    "expected": [{"source": "data/bert.pdf", "page": 1}]
+  },
+  {
+    "question": "What special tokens does BERT use to represent a single sentence or a sentence pair in one input sequence?",
+    "expected": [{"source": "data/bert.pdf", "page": 3}]
+  },
+  {
+    "question": "What three types of embeddings are summed to form BERT's input representation?",
+    "expected": [{"source": "data/bert.pdf", "page": 4}]
+  },
+  {
+    "question": "What GLUE benchmark results does BERT report across tasks like MNLI, QQP, QNLI, SST-2, and CoLA?",
+    "expected": [{"source": "data/bert.pdf", "page": 5}]
+  },
+  {
+    "question": "What EM and F1 scores does BERT achieve on the SQuAD dev and test sets?",
+    "expected": [{"source": "data/bert.pdf", "page": 6}]
+  },
+  {
+    "question": "What does the ablation study removing the next sentence prediction objective show about MNLI and QNLI accuracy?",
+    "expected": [{"source": "data/bert.pdf", "page": 7}]
+  },
+  {
+    "question": "What figure illustrates the architectural differences between BERT, OpenAI GPT, and ELMo?",
+    "expected": [{"source": "data/bert.pdf", "page": 12}]
+  },
+  {
+    "question": "What learning rates and number of epochs were searched during BERT fine-tuning?",
+    "expected": [{"source": "data/bert.pdf", "page": 13}]
+  },
+  {
+    "question": "What does the appendix ablation on the number of pre-training steps show about MNLI dev accuracy?",
+    "expected": [{"source": "data/bert.pdf", "page": 15}]
+  },
+  {
+    "question": "Why are multi-head attention layers slow during incremental decoding compared to training?",
+    "expected": [{"source": "data/MQA.pdf", "page": 0}]
+  },
+  {
+    "question": "What is the pseudocode for Dot-Product Attention on a single query?",
+    "expected": [{"source": "data/MQA.pdf", "page": 1}]
+  },
+  {
+    "question": "How is multi-head attention batched efficiently across multiple query positions?",
+    "expected": [{"source": "data/MQA.pdf", "page": 2}]
+  },
+  {
+    "question": "How is Multi-Query Attention defined as a variation of multi-head attention?",
+    "expected": [{"source": "data/MQA.pdf", "page": 4}]
+  },
+  {
+    "question": "What is the pseudocode for one incremental decoding step of multi-query self-attention?",
+    "expected": [{"source": "data/MQA.pdf", "page": 5}]
+  },
+  {
+    "question": "Which attention layers in the trained model were replaced with multi-query attention?",
+    "expected": [{"source": "data/MQA.pdf", "page": 6}]
+  },
+  {
+    "question": "What perplexity and BLEU scores are reported for multi-head versus multi-query attention on WMT14 English-German translation?",
+    "expected": [{"source": "data/MQA.pdf", "page": 7}]
+  }
+]

@@ -6,11 +6,11 @@ class VectorStore:
     def __init__(
         self,
         index_type,
-        n_list,
-        nprobe,
-        hnsw_m,
-        hnsw_efconstruct,
-        hnsw_efsearch
+        n_list = 100,
+        nprobe = 10,
+        hnsw_m = 16,
+        hnsw_efconstruct = 40,
+        hnsw_efsearch = 16
     ):
         self.index_type = index_type
         self.n_list = n_list
