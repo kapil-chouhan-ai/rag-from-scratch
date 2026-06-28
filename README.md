@@ -249,14 +249,12 @@ against each other, not as an absolute accuracy figure.
 
 ### Results
 
-*(run `python -m eval.benchmark` and paste the printed table here)*
-
 | Config | Hit@5 | Recall@5 | MRR | NDCG@5 | Embed (s) | IdxBuild (s) | Latency (ms) |
 |---|---|---|---|---|---|---|---|
-| dense_flat_no_rerank | | | | | | | |
-| dense_flat_rerank | | | | | | | |
-| dense_hnsw_rerank | | | | | | | |
-| hybrid_flat_rerank | | | | | | | |
+| dense_flat_no_rerank | 0.88 | 0.88 | 0.7333 | 0.7702 | 6.812 | 0.005 | 74.61 |
+| dense_flat_rerank | 0.88 | 0.88 | 0.78 | 0.8049 | 6.812 | 0.005 | 99.72 |
+| dense_hnsw_rerank | 0.88 | 0.88 | 0.78 | 0.8049 | 6.812 | 0.034 | 98.47 |
+| hybrid_flat_rerank | 0.92 | 0.92 | 0.7913 | 0.8232 | 6.812 | 0.005 | 106.21 |
 
 ---
 
